@@ -1,0 +1,77 @@
+app:
+  data_dir: data
+  log_file: app.log
+  min_content_length: 600
+  max_days: 7
+  request_timeout: 10
+  max_retries: 3
+  sleep_min: 0.5
+  sleep_max: 1.5
+
+sources:
+  rss_feeds:
+    - "https://rsshub.app/juejin/tag/AI"
+  sitemap_urls:
+    - "https://juejin.cn/sitemap.xml"
+  tag_urls:
+    - "https://juejin.cn/tag/AI"
+
+filtering:
+  include_keywords:
+    - "人工智能"
+    - "AI"
+    - "大模型"
+    - "LLM"
+    - "AIGC"
+    - "机器学习"
+    - "深度学习"
+    - "Transformer"
+    - "Diffusion"
+    - "RAG"
+    - "Agent"
+    - "推理"
+    - "训练"
+    - "微调"
+    - "部署"
+    - "Serving"
+    - "vLLM"
+    - "TensorRT"
+    - "ONNX"
+    - "Triton"
+    - "CUDA"
+    - "量化"
+    - "蒸馏"
+    - "LoRA"
+    - "性能"
+    - "延迟"
+    - "吞吐"
+    - "QPS"
+    - "显存"
+    - "加速"
+    - "架构"
+    - "工程化"
+    - "可观测性"
+    - "多模型路由"
+  exclude_keywords:
+    - "招聘"
+    - "内推"
+    - "变现"
+    - "副业"
+    - "培训"
+    - "课程"
+    - "广告"
+    - "软文"
+    - "付费社群"
+    - "引流"
+  author_whitelist: []
+
+ai:
+  enabled: true
+  model: "gpt-4o-mini"
+
+notify:
+  smtp_host: ""
+  smtp_port: 587
+  smtp_user: ""
+  smtp_password: ""
+  to_emails: []
